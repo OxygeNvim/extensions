@@ -1,9 +1,9 @@
-name: Luacheck
+name: Tests
 
 on: [push, pull_request]
 
 jobs:
-  Test:
+  Luacheck:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
