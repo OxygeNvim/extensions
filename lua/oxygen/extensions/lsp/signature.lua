@@ -14,7 +14,7 @@ M.is_trigger_char = function(chars)
 end
 
 M.setup = function(client, bufnr)
-  local group = vim.api.nvim_create_augroup('LspSignature', { clear = false })
+  local group = require('oxygen.core.utils').create_augroup('LspSignature', { clear = false })
   vim.api.nvim_clear_autocmds({ group = group, buffer = bufnr })
 
   local trigger_chars = client.server_capabilities.signatureHelpProvider.triggerCharacters
